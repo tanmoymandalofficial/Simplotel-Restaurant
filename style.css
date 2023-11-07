@@ -1,0 +1,239 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+body{
+    background-color: #4C5053;
+    padding: 1px 4px 0;
+}
+
+#headerMenu {
+    display: grid;
+    max-width: 95%;
+    grid-template-columns: 10% 70% auto;
+    justify-content: space-between;
+
+}
+.menu{
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(6, auto );
+}
+.menu p{
+    font-weight:600;
+    font-size: 18px;
+    padding: 15px 0 15px 0;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+.hammenu{
+    display: none;
+}
+
+/* -------------------- */
+
+
+#bannerImg{
+    height: 110vh;
+    background-image: url("./Images/img1.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    background-position: center ;
+    /* background-position: top; */
+    
+}
+#bannerImg div{
+    max-width: 1140px ;
+    width: 100%;
+    margin: auto;
+    /* height: 20px; */
+    /* background-color: #fff; */
+}
+#bannerImg .info{
+    width: 50%;
+    max-width: 50%;
+    padding: 40px;
+    background-color: rgba(244, 96, 96, 0.6);
+    /* border: 1px solid red; */
+    margin-left: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+#bannerImg .info h2{
+    font-size: 43px;
+    margin-bottom: 15px;
+}
+#bannerImg .info p{
+    /* letter-spacing: 1px; */
+    line-height: 22px;
+    font-size:15px;
+    max-width: 90%;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+#devide{
+    height: 90px;
+    background-image: linear-gradient(to right,#FF66C4, #FFDD5A );
+    margin-bottom: 15px;
+}
+
+/* ------------------- */
+
+#product{
+    background-image: linear-gradient(to right,#FF66C4, #FFDD5A );
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+#product h2{
+    font-size: 42px;
+    letter-spacing: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: white;
+    
+}
+
+.items{
+    max-width: 80%;
+    margin: 70px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.items div{
+    width: 260px;
+    background-color: #fff;
+    border-radius: 0 50px;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+.items div img{
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 0 50px 0 0 ;
+}
+.items div h3{
+    margin: 12px 0;
+    letter-spacing: 1.5px;
+    font-size: 19px;
+    font-weight: 800;
+}
+.items div p{
+    font-size: 14px;
+    max-width: 80%;
+    margin: auto;
+    line-height: 20px;
+    margin-bottom: 20px;
+    color: #393b3c;
+}
+#product button{
+    padding: 15px 50px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #FFC4BD;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
+
+
+
+
+/* ----------------------------------------- */
+
+
+
+
+
+@media only screen and (max-width: 1140px){
+
+    #bannerImg div{
+        width: 90%;
+    }
+    #bannerImg .info{
+        width: 600px;
+        max-width: 70%;
+        /* border: 5px solid blue; */
+    }
+
+}
+@media only screen and (max-width: 960px){
+    #headerMenu {
+        grid-template-columns: 0% 80% auto;
+    
+    }
+    #bannerImg div{
+        min-width: 90%;
+    }
+    #bannerImg .info{
+        margin: auto;
+    }
+    .items{
+        max-width: 90%;
+        justify-content: space-between;
+    }
+
+}
+
+@media only screen and (max-width: 850px){
+    #headerMenu {
+        grid-template-columns: 80% auto;
+        /* padding-bottom: 10px; */
+    }
+
+    .menu{
+        display: none; 
+        visibility: hidden; 
+    }
+    .hammenu{
+        display: block;
+        padding: 15px 15px;
+        font-size: 20px;
+    }
+
+    #bannerImg{
+        height: 75vh;
+    }
+
+    .items{
+        display: grid;
+        max-width: 80%;
+        gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        
+    }
+}
+
+@media only screen and (max-width: 700px){
+    #bannerImg{
+        height: 50vh;
+    }
+    .items{
+        display: grid;
+        grid-template-columns:  repeat(1, 1fr);
+        justify-items: center;
+        
+    }
+    .items div{
+        width: 90%;
+        min-width: 330px;
+    }
+    .items div img{
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 0 50px 0 0 ;
+    }
+}
